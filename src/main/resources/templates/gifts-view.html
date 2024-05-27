@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadeaux</title>
+</head>
+<body>
+<h2>Liste des cadeaux</h2>
+<ul>
+    <li th:each="gift:${list}">
+        <span th:text="${gift.getName()}"></span>
+    </li>
+</ul>
+</body>
+</html>
