@@ -6,10 +6,23 @@
 </head>
 <body>
 <h2>Liste des cadeaux</h2>
-<ul>
-    <li th:each="gift:${list}">
-        <span th:text="${gift.getName()}"></span>
-    </li>
-</ul>
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nom</td>
+            <td>Prix</td>
+            <td>Raison</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="gift:${list}">
+            <td th:text="${gift.getId()}"></td>
+            <td th:text="${gift.getName()}"></td>
+            <td th:text="${gift.getPrice()}"></td>
+            <td th:text="${gift.getOpportunity()}"></td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
